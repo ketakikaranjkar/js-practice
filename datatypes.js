@@ -23,6 +23,7 @@ let variable2 = 24;
 let variable3 = null;
 let variable4 = false;
 console.log(variable1, variable2, variable3, variable4);
+console.log(variable2);
 
 let firstName1 = "piya";
 let lastName1 = "joshi";
