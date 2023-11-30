@@ -75,3 +75,73 @@ console.log(names);
 let js = "javascript";
 let py = "python";
 console.log(js);
+
+let userOne1 = {
+  name1: "tara",
+  shops: 24
+};
+//this is a referance instead of value.
+let userTwo2 = userOne1;
+
+console.log(userOne1 == userTwo2);
+
+let color = {
+  black: 3,
+  red: 4
+};
+
+let car = color;
+console.log(car == color);
+
+let bike = {
+  activa: 1,
+  accese: 2
+};
+let sportBike = {
+  R15: 1,
+  Duke: 2
+};
+console.log(bike == sportBike);
+
+console.log(Math.PI);
+console.log(Math.round(9.81));
+console.log(Math.round(PI));
+console.log(Math.ceil(PI));
+console.log(Math.min(-5, 9, 3, 10));
+console.log(Math.max(10, 4, 2, +3));
+
+const randNum = Math.random();
+console.log(randNum);
+
+const num = Math.floor(Math.random() * 11);
+console.log(num);
+
+//apsolute value
+console.log(Math.abs(-10));
+
+//Square root
+console.log(Math.sqrt(100));
+
+console.log(Math.sqrt(2));
+
+const min = 10;
+const max = 20;
+const randomInteger = Math.floor(Math.random() * (min - max + 1)) + min;
+console.log(randomInteger);
+
+const cal = Math.round(6 * 9);
+console.log(cal);
+
+console.log(Math.pow(5, 7));
+console.log(Math.round(3.5));
+console.log(Math.ceil(4.01));
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+console.log(getRandomInt(3));
+
+function getRandomNum(min) {
+  return Math.ceil(Math.random() * min);
+}
+console.log(getRandomNum(5));
