@@ -145,3 +145,192 @@ function getRandomNum(min) {
   return Math.ceil(Math.random() * min);
 }
 console.log(getRandomNum(5));
+
+const rendomNum = Math.random();
+console.log(rendomNum);
+
+function getRoundFigure(min) {
+  return Math.round(Math.random() + min);
+}
+console.log(getRoundFigure(3.99));
+
+//absolute value means actual num. expected ans=8.7
+console.log(Math.abs(8.7));
+
+//square method return square root of a number. Ans= 3 .
+//3 is a square and 9 is a square root of no. 3
+console.log(Math.sqrt(9));
+//same 36 is a square no. of 6. 6 is a square root.
+console.log(Math.sqrt(36));
+
+//Math.pow method multiply first no. to second no. times.
+//7*7*7*7=2401
+console.log(Math.pow(7, 4));
+
+//E this property represente Euler. value = 2.17
+console.log(Math.E);
+
+let randNumb = Math.random();
+let numBtnZeroAndTen = randNum * 11;
+console.log(numBtnZeroAndTen);
+
+let myLuckyNo = Math.random();
+let myDate = randNum * 1.5;
+console.log(myDate);
+
+let date = Math.random();
+let bDay = randNum + 4;
+console.log(bDay);
+
+//Randdom number generater
+let school = Math.random();
+let clg = randNum - 0.54;
+console.log(clg);
+
+let salary = 500;
+let monthSalry = salary + 10;
+console.log(monthSalry);
+
+//String
+let space = " ";
+let language = "english";
+let books = "story";
+let bookType = language + space + books;
+console.log(bookType);
+
+let jaga = "  ";
+let me = "ketaki";
+let me1 = "karanjkar";
+let mySelf = me + jaga + me1;
+console.log(mySelf);
+
+const paragraph = "hdfjhs jhgdjhsk jhdhskh hdkhfks hdijsi jkj.";
+console.log(paragraph);
+
+// in js \n means new line
+const laptop = "i am a happy girl,\n ketaki";
+console.log(laptop);
+
+//in js \t means 8 space
+console.log("Day 1\t3\t5");
+
+console.log("this is back slash(\\)");
+
+console.log("In every programming language it starts with 'Hello, World!'");
+
+let human = "neha";
+let city5 = "pune";
+let job8 = "teacher";
+let language1 = "javascript";
+let age3 = 24;
+
+let personalInfoTwo = `I am ${human}. I live in ${city5}`;
+let personalInfoThree = `I am ${age3}. I am a ${job8}`;
+console.log(personalInfoTwo);
+console.log(personalInfoThree);
+let personalInfoFor = `I am ${age3}.`;
+console.log(personalInfoFor);
+
+let a = 2;
+let b = 3;
+console.log(`${a} is greater than ${b}:${a > b}`);
+
+let ketaki = 24;
+let aishu = 23;
+console.log(`${ketaki} greater than ${aishu}: ${ketaki > aishu}`);
+
+let polo = 4;
+let activa = 4;
+console.log(`${polo} equal to ${activa}: ${(polo = activa)}`);
+
+//length check
+let serName = "karanjkar";
+let serNAme2 = "kale";
+console.log(serName.length);
+console.log(serNAme2.length);
+
+//access deffirent character
+let string = "Javascript";
+let firstLetter = string[0];
+console.log(firstLetter);
+
+let secondLetter = string[1];
+console.log(secondLetter);
+let lastLetter = string[9];
+console.log(lastLetter);
+
+//toUpperCase
+let string1 = "javaScript";
+console.log(string.toUpperCase());
+
+//toLowerCase
+let string2 = "PYTHON";
+console.log(string2.toLocaleLowerCase());
+
+//substr()
+let string3 = "javascript";
+console.log(string3.substr(4, 6));
+
+//subString()
+let lang = "JavaScript";
+console.log(lang.substring(0, 4));
+console.log(lang.substring(4, 10));
+console.log(lang.substring(4));
+
+let collage = "Sadhna";
+console.log(collage.length);
+console.log(collage.substr(3));
+console.log(collage.toUpperCase());
+console.log(collage.substring(2, 4));
+console.log(collage.substring(4, 6));
+
+//split
+let stringg = " 30 Days Of JavaScript";
+console.log(stringg.split());
+console.log(stringg.split(""));
+
+//split in single charactor
+let carName = "polo";
+console.log(carName.split());
+console.log(carName.split(""));
+
+//split in array
+let countries = "india, china, england, rasia";
+console.log(countries.split(","));
+
+//trim space between string
+let stri = "  30 days of js  ";
+console.log(stri.trim(""));
+console.log(stri);
+
+//includes in true or false
+let st = "30 days of  java";
+console.log(st.includes("days"));
+console.log(st.includes("OF"));
+
+//replace word
+let stringgg = "JavaScript";
+console.log(stringgg.replace("JavaScript", "Python"));
+
+//charAt
+let page = "30 days of javascript";
+console.log(page.charAt(0));
+
+let lastIndex = string.length - 1;
+console.log(string.charAt(lastIndex));
+
+console.log("hello world");
+
+let phone = "iphone 15";
+console.log(phone.charAt(0));
+
+let lastCharactor = string.length - 1;
+console.log(string.charAt(lastCharactor));
+
+//charCodeAt index
+let water = "hot bag";
+console.log(water.charCodeAt(0));
+
+//string indexOf(substring)
+let strinG = " i love JavaScript";
+console.log(strinG.lastIndexOf("love"));
