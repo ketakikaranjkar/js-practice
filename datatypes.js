@@ -334,3 +334,118 @@ console.log(water.charCodeAt(0));
 //string indexOf(substring)
 let strinG = " i love JavaScript";
 console.log(strinG.lastIndexOf("love"));
+console.log(string.lastIndexOf("i"));
+console.log(strinG.indexOf("i"));
+
+//concat add more string charactor in main value
+let striNg = "love";
+console.log(striNg.concat("is", "life"));
+
+let java = "love is the best to in the world";
+console.log(java.startsWith("love"));
+console.log(java.endsWith("world"));
+console.log(java.startsWith("the"));
+console.log(java.endsWith("is"));
+
+//search the index of the string
+let javaScript =
+  "i love javascript. if you do not love javascript what else can you love";
+console.log(javaScript.search("if"));
+
+let strIng = "love";
+let stRing = /love/;
+let sTring = /love/gi;
+console.log(sTring);
+
+let love =
+  "i love javascript. if you do not love javascript what else can you love";
+console.log(love.match("else"));
+console.log(love.match(sTring));
+
+//search the index of the digits
+let txt =
+  "In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge";
+let regEx = /\d+/;
+console.log(txt.match(regEx));
+console.log(txt.match(/\d+/g));
+
+let digit = "i am 24 years old and my brother 26 years old.";
+let regExx = /\d+/;
+console.log(digit.match(regExx));
+console.log(digit.match(/\d+/g));
+
+//repeat string
+let sString = "love js, ";
+console.log(sString.repeat(4));
+
+//checking data type and casting
+
+let broName = "pranav";
+let work = "business";
+let old = 26;
+let school1;
+let travel = "";
+console.log(typeof "pranav");
+console.log(typeof "business");
+console.log(typeof 26);
+console.log(typeof undefined);
+console.log(typeof null);
+console.log(typeof school1);
+
+//CHANGING DATA TYPE 1.string to int 2. string to float 3. float to int
+
+//string to int
+let changeNum = "10";
+let numInt = parseInt(changeNum);
+console.log(numInt);
+
+let numb = "10";
+let numIntt = Number(numb);
+console.log(numIntt);
+
+let numbe = "10";
+let numInttt = +numbe;
+console.log(numInttt);
+
+let numbeR = "5";
+let chDig = parseInt(numbeR);
+console.log(chDig);
+
+// let chDi = "24";
+// let ageInt = parseInt(chDi);
+// console.log(ageInt);
+
+// let myAGE = "24";
+// let ageInt = Number(myAGE);
+// console.log(ageInt);
+
+let myAGE = "2.4";
+let ageInt = +myAGE;
+console.log(ageInt);
+
+// 2. string to float
+
+let agePoja = "27.6";
+let ageFloat = parseFloat(agePoja);
+console.log(ageFloat);
+
+let ageAishu = "23.1";
+let aishuFloat = Number(ageAishu);
+console.log(aishuFloat);
+
+let agePra = "25.9";
+let praAge = +agePra;
+console.log(praAge);
+
+// 3. float to int
+let agePlus = 30.4;
+let plusAge = parseInt(agePlus);
+console.log(plusAge);
+
+let agePl = 56.6;
+let plAge = Number(agePl);
+console.log(plAge);
+
+let agePL = 40.6;
+let plA = +agePL;
+console.log(plA);
