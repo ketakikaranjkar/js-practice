@@ -172,6 +172,242 @@ console.log(w.includes("JS"));
 // Checking array
 const m = [1, 2, 3, 4, 5, 6];
 console.log(Array.isArray(m));
+const h = 100;
+console.log(Array.isArray(h));
 
+// Converting array to string
 const s = ["ketaki", "aishu", "sonu", "pooja"];
 console.log(s.toString());
+
+const t = [1, 3, 4, 5, 6, 7];
+console.log(t.toString());
+
+// Joining array elements
+const k = [1, 2, 3, 4, 5];
+console.log(k.join());
+const dd = ["ketu", "aishu", "sonu", "pooja"];
+console.log(dd.join());
+console.log(dd.join(""));
+console.log(dd.join(" "));
+console.log(dd.join(" , "));
+console.log(dd.join(" # "));
+
+const e = ["HTML", "CSS", "JS", "Python"];
+console.log(e.join());
+console.log(e.join(""));
+console.log(e.join(" , "));
+console.log(e.join(" "));
+console.log(e.join(" # "));
+
+// Slice array elements
+const q = [1, 2, 3, 4, 5];
+console.log(q.slice());
+console.log(q.slice(0));
+console.log(q.slice(0, q.length));
+console.log(q.slice(1, 4));
+
+// Splice method in array
+const r = [1, 2, 3, 4, 5, 6];
+r.splice();
+console.log(r);
+r.splice(2, 4, 7, 8, 9);
+console.log(r);
+r.splice(0, 1);
+console.log(r);
+
+// Adding item to an array using push
+const qq = ["item1", "item2", "item3"];
+qq.push("newItem");
+console.log(qq);
+
+const hh = [1, 2, 3, 4, 5];
+hh.push(6);
+console.log(hh);
+
+// Removing the end element using pop
+const ee = ["banana", "mango", "apple", "orange"];
+ee.pop();
+console.log(ee);
+
+const rr = [1, 2, 3, 4, 9];
+rr.pop();
+console.log(rr);
+
+// Removing an element from the beginning
+const ff = ["banana", "mango", "apple", "orange"];
+ff.shift();
+console.log(ff);
+
+const pp = [3, 6, 8, 5, 2];
+pp.shift();
+console.log(pp);
+
+// Add an element from the beginning
+const tt = [1, 2, 3, 4, 5];
+tt.unshift(0);
+console.log(tt);
+
+const mm = ["mango", "apple", "orange"];
+mm.unshift("banana");
+console.log(mm);
+
+// Reversing array order
+const v = [1, 2, 3, 4, 5];
+v.reverse();
+console.log(v);
+
+// Sorting elements in array
+const cc = ["HTML", "CSS", "JS", "PYTHON", "REACT", "REDUX"];
+cc.sort();
+console.log(cc);
+cc.reverse();
+console.log(cc);
+
+// Array of arrays
+const nn = [1, 2, 3];
+const bb = [4, 5, 6];
+const arrayOfArrays = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+console.log(arrayOfArrays[0]);
+
+const z = ["html", "css", "js"];
+const zz = ["python", "react", "redux"];
+const arrayOfArray = [
+  ["python", "react", "redux"],
+  ["html", "css", "js"]
+];
+console.log(arrayOfArray[1]);
+
+// ** Exercise: Level 1**
+
+// Declare an empty array;
+
+// Declare an empty array;
+const ab = [];
+console.log(ab);
+
+// Declare an array with more than 5 number of elements
+const oo = [1, 2, 3, 4, 5];
+console.log(oo.length);
+// last index
+const ooo = oo.length - 1;
+console.log(ooo);
+// first Index
+console.log(oo[0]);
+// second index
+console.log(oo[1]);
+
+// Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
+const mixedDataType = [
+  "number",
+  "string",
+  "boolean",
+  "undefine",
+  "Null",
+  "symbols"
+];
+let mDT = mixedDataType.indexOf("comma");
+if (mDT === -1) {
+  console.log("this type doesnt exist");
+} else {
+  console.log("this type does exist");
+}
+
+// Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
+
+const itCompanies = [
+  "facebook",
+  "google",
+  "microsoft",
+  "apple",
+  "IBN",
+  "oracle",
+  "amazon"
+];
+
+const lastCompay = itCompanies.length - 1;
+
+lastCom = itCompanies[lastCompay];
+// Print the array using console.log()
+console.log(itCompanies);
+console.log(itCompanies.length);
+console.log(itCompanies[0]);
+console.log(lastCom);
+
+// Print out each company
+console.log(itCompanies[0]);
+console.log(itCompanies[1]);
+console.log(itCompanies[2]);
+console.log(itCompanies[3]);
+console.log(itCompanies[4]);
+console.log(itCompanies[5]);
+console.log(itCompanies[6]);
+
+// Change each company name to uppercase one by one and print them out
+for (let i = 0; i < itCompanies.length; i++) {
+  let companyName = itCompanies[i].toUpperCase();
+  console.log(companyName);
+}
+
+// Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies
+const capitalizedCompanies = itCompanies.map(
+  company => company.charAt(0).toUpperCase() + company.slice(1)
+);
+const sentencee =
+  capitalizedCompanies.join(", ").replace(/,([^,]*)$/, " and$1") +
+  " are big IT companies";
+console.log(sentencee);
+
+const machines = ["dhoom", "cooler", "wood", "fridze", "ac"];
+console.log(machines);
+
+let machinesCountO = [];
+for (let oneO = 0; oneO < machines.length; oneO++) {
+  let count = 0;
+  for (let twoO = 0; twoO < machines[oneO].length; twoO++) {
+    if (machines[oneO][twoO] === "o") {
+      count++;
+    }
+  }
+  if (count > 1) {
+    machinesCountO.push(machines[oneO]);
+  }
+}
+console.log(machinesCountO);
+
+const dress = ["jeans", "shirt", "scarf", "kurti", "top"];
+let findS = [];
+for (let ss = 0; ss < dress.length; ss++) {
+  if (dress[ss].includes("s")) {
+    findS.push(dress[ss]);
+  }
+}
+console.log(findS);
+
+console.log(dress.sort());
+// console.log(dress.reverse());
+console.log(dress.slice(3));
+console.log(dress.slice(0, 3));
+// Slice out the middle dress from the array
+
+console.log(dress.slice());
+
+// Remove the first dress from the array
+dress.splice(0, 1);
+console.log(dress);
+
+// Remove the middle dress from the array
+dress.splice(2, 1);
+console.log(dress);
+
+// Remove the last dress from the array
+dress.splice(4, 4);
+console.log(dress);
+
+// Remove all dress
+dress.splice(0);
+console.log(dress);
+
+// ** Exercise: Level 2**
