@@ -416,3 +416,9 @@ let text =
   "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
 console.log(text);
 console.log(text.length);
+const numberSs = [1, 2, 4, 5.6, 7];
+console.log("Number", numberSs);
+const fruitsS = ["banana", "apple", "grapes", "mango"];
+console.log("Fruits", fruitsS);
+let vegetablesS = ["Tomato", "Patato", "Cabbage", "Carrot", "Onion"];
+console.log("Vegetable", vegetablesS);
