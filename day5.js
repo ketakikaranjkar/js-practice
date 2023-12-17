@@ -416,9 +416,68 @@ let text =
   "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
 console.log(text);
 console.log(text.length);
-const numberSs = [1, 2, 4, 5.6, 7];
-console.log("Number", numberSs);
-const fruitsS = ["banana", "apple", "grapes", "mango"];
-console.log("Fruits", fruitsS);
-let vegetablesS = ["Tomato", "Patato", "Cabbage", "Carrot", "Onion"];
-console.log("Vegetable", vegetablesS);
+console.log(text.split(" "));
+
+// In the following shopping cart add, remove, edit items
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+shoppingCart[2] = "Green Tea";
+console.log(shoppingCart);
+shoppingCart.unshift("Meat");
+console.log(shoppingCart);
+shoppingCart.pop("Honey");
+console.log(shoppingCart);
+shoppingCart.push("sugar");
+console.log(shoppingCart);
+
+// Concatenate the following two variables and store it in a fullStack variable.
+const frontend = ["HTML", "CSS", "JS", "React", "Redux"];
+const backend = ["Node", "Express", "MongoDB"];
+const fullStack = frontend.concat(backend);
+console.log(fullStack);
+
+// ** Exercise: Level 3 **
+// The following is an array of 10 students vaY:
+
+const vaY = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+const sortAge = vaY.sort((a, b) => a - b);
+const minAge = sortAge[0];
+const maxAge = sortAge[sortAge.length - 1];
+console.log(sortAge);
+console.log(minAge);
+console.log(maxAge);
+
+const vay = [24, 26, 23, 21];
+const sorti = vay.sort((a, b) => a - b);
+const minVay = sorti[0];
+const maxVay = sorti[sorti.length - 1];
+console.log(sorti);
+console.log(minVay);
+console.log(maxVay);
+
+// Find the median age(one middle item or two middle items divided by two)
+const yearAge = [17, 12, 15, 16, 11, 19, 14, 13];
+yearAge.sort((a, b) => a - b);
+const leng = yearAge.length;
+let mediun;
+
+if (leng % 2 == 0) {
+  const middle1 = yearAge[leng / 2 - 1];
+  const middle2 = yearAge[leng / 2];
+  mediun = (middle1 + middle2) / 2;
+} else {
+  mediun = yearAge[Math.floor(leng / 2)];
+}
+console.log("mediun age", mediun);
+
+// Find the average age(all items divided by number of items)
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+const summ = ages.reduce((acc, curr) => acc + curr, 0);
+const average = summ / ages.length;
+console.log(average);
+
+const maxAgE = Math.max(...ages);
+const minAgE = Math.min(...ages);
+
+const range = maxAgE - minAgE;
+
+console.log("Range of Ages:", range);
