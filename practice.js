@@ -191,19 +191,19 @@ if (total % 2 === 0) {
 }
 console.log(midSortNo);
 
-const desh = ["India", "Greece", "Kenya", "Bhutan", "Mexico", "Oman"];
-const totalDesh = desh.length;
-let middleDesh;
-if (totalDesh % 2 === 0) {
-  const midIndex1 = totalDesh / 2 - 1;
-  const midIndex2 = totalDesh / 2;
-  const midDesh1 = desh[midIndex1];
-  const midDesh2 = desh[midIndex2];
-  middleDesh = [midDesh1 + midDesh2];
-} else {
-  middleDesh = desh[Math.floor(totalDesh / 2)];
-}
-console.log(middleDesh);
+// const desh = ["India", "Greece", "Kenya", "Bhutan", "Mexico", "Oman"];
+// const totalDesh = desh.length;
+// let middleDesh;
+// if (totalDesh % 2 === 0) {
+//   const midIndex1 = totalDesh / 2 - 1;
+//   const midIndex2 = totalDesh / 2;
+//   const midDesh1 = desh[midIndex1];
+//   const midDesh2 = desh[midIndex2];
+//   middleDesh = [midDesh1 + midDesh2];
+// } else {
+//   middleDesh = desh[Math.floor(totalDesh / 2)];
+// }
+// console.log(middleDesh);
 
 const sumAll = yy.reduce((acc, curr) => acc + curr);
 const average1 = sumAll / yy.length;
@@ -218,3 +218,17 @@ const maxMoneyy = moneyy[moneyy.length - 1];
 const minMoneyy = moneyy[0];
 const rangE = maxMoneyy - minMoneyy;
 console.log(rangE);
+
+const desh = ["India", "Greece", "Kenya", "Bhutan", "Mexico", "Oman"];
+const totalDesh = desh.length;
+let middleDesh;
+if (totalDesh % 2 === 0) {
+  const midIndex1 = totalDesh / 2 - 1;
+  const midIndex2 = totalDesh / 2;
+  const midDesh1 = desh[midIndex1];
+  const midDesh2 = desh[midIndex2];
+  middleDesh = [midDesh1 + midDesh2];
+} else {
+  middleDesh = desh[Math.floor(totalDesh / 2)];
+}
+console.log(middleDesh);
