@@ -481,3 +481,17 @@ const minAgE = Math.min(...ages);
 const range = maxAgE - minAgE;
 
 console.log("Range of Ages:", range);
+
+const yearAge1 = [17, 12, 15, 16, 11, 19, 14, 13];
+const length = yearAge1.length;
+let midAge;
+if (length % 2 == 0) {
+  const midAgeIn1 = length / 2;
+  const midAgeIn2 = length / 2 - 1;
+  const midAge1 = yearAge1[midAgeIn1];
+  const midAge2 = yearAge1[midAgeIn2];
+  midAge = [midAge1, midAge2];
+} else {
+  midAge = yearAge1[Math.floor(length / 2)];
+}
+console.log(midAge);
