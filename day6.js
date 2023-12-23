@@ -278,22 +278,7 @@ for (let odd = 0; odd <= 100; odd++) {
 }
 
 // Prime Number
-// let primeSum = 0;
-// for (let prime = 2; prime <= 100; prime++) {
-//   let isPrime = true;
 
-//   for (let prime2 = 2; prime2 < prime; prime2++) {
-//     if (prime % prime2 === 0) {
-//       isPrime = false;
-//       break;
-//     }
-//   }
-//   if (isPrime) {
-//     console.log(prime);
-//     primeSum += prime;
-//   }
-// }
-// console.log("Sum of prime number", primeSum);
 for (let prime = 2; prime <= 100; prime++) {
   let isPrime = true;
   for (let prime2 = 2; prime2 < prime; prime2++) {
@@ -321,3 +306,267 @@ for (let ps = 2; ps <= 100; ps++) {
   }
 }
 console.log("Sum of prime number", primeSum);
+
+// Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+let sumALL = 0;
+for (let sa = 0; sa <= 100; sa++) {
+  console.log(sa);
+  sumALL += sa;
+}
+console.log(`"The sum of all number 0 to 100 is ${sumALL}"`);
+
+// Use for loop to iterate from 0 to 100 and print the sum of all evens
+let evenSum = 0;
+for (let es = 0; es <= 100; es++) {
+  if (es % 2 == 0) {
+    evenSum += es;
+  }
+}
+console.log(`"The sum of all even number from 0 to 100 is ${evenSum}"`);
+
+// Use for loop to iterate from 0 to 100 and print the sum of all odd
+let sumAllOdd = 0;
+for (let so = 0; so <= 100; so++) {
+  if (so % 2 !== 0) {
+    sumAllOdd += so;
+  }
+}
+console.log(`"The sum of all odd number from 0 to 100 is ${sumAllOdd}"`);
+
+// Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+console.log(`[${evenSum},${sumAllOdd}]`);
+
+// Develop a small script which generate array of 5 random numbers
+let randomNo = [];
+for (let rn = 0; rn < 5; rn++) {
+  const randomNumber = Math.floor(Math.random() * 100);
+  randomNo.push(randomNumber);
+}
+console.log(randomNo);
+
+// Develop a small script which generate array of 5 random numbers and the numbers must be unique
+let unique = [];
+while (unique.length < 5) {
+  const random1 = Math.floor(Math.random() * 100);
+  if (!unique.includes(random1)) {
+    unique.push(random1);
+  }
+}
+console.log(unique);
+
+// Develop a small script which generate a six characters random id
+
+function generateRandomId(length) {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let randomID = "";
+
+  for (let c = 0; c < length; c++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    randomID += characters.charAt(randomIndex);
+  }
+  return randomID;
+}
+const randomID = generateRandomId(6);
+console.log(randomID);
+
+// ** Exercises: Level 2 **
+// Develop a small script which generate any number of characters random id:
+function randomCN(length) {
+  const ranCharacter = "234gsxdfszdFDGHKJHGJFtgujyhk87656";
+  let randomId = "";
+  for (let g = 0; g < length; g++) {
+    const ranDomIndex = Math.floor(Math.random() * ranCharacter.length);
+    randomId += ranCharacter.charAt(ranDomIndex);
+  }
+  return randomId;
+}
+const randomId = randomCN(length);
+console.log(randomId);
+
+// Write a script which generates a random hexadecimal number.
+function hexadecimalNo() {
+  const randomHexNo = Math.floor(Math.random() * 16777215).toString(16);
+
+  return `#${randomHexNo.padStart(6, "0")}`;
+}
+const randomHexa = hexadecimalNo();
+console.log(randomHexa);
+
+// Write a script which generates a random rgb color number.
+function generateRandomRGB() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  return `rgb(${red},${green},${blue})`;
+}
+const randomColor = generateRandomRGB();
+console.log(randomColor);
+
+// Using the above countries array, create the following new array.
+
+const counArr = [
+  "ALBANIA",
+  "BOLIVIA",
+  "CANADA",
+  "DENMARK",
+  "ETHIOPIA",
+  "FINLAND",
+  "GERMANY",
+  "HUNGARY",
+  "IRELAND",
+  "JAPAN",
+  "KENYA"
+];
+let newCounArr = [];
+for (let ca = 0; ca < counArr.length; ca++) {
+  newCounArr.push(counArr[ca].toLowerCase());
+}
+console.log(newCounArr);
+
+// Using the above countries array, create an array for countries length'.
+let counArrLen = [];
+for (let al = 0; al < counArr.length; al++) {
+  counArrLen.push(counArr[al].length);
+}
+console.log(counArrLen);
+
+// // Use the countries array to create the following array of arrays:
+let newAr = [];
+for (let na = 0; na < counArr.length; na++) {}
+
+// creat  ['Albania', 'ALB', 7] this type array in console.
+
+function newConArr() {
+  const result = counArr.map(country => {
+    const len = country.length;
+    const code = country.slice(0, 3);
+    return [country.charAt(0) + country.slice(1).toLowerCase(), code, len];
+  });
+  return result;
+}
+const secArr2 = newConArr();
+console.log(secArr2);
+
+// In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+const findLAND = [];
+for (let fl = 0; fl < counArr.length; fl++) {
+  if (counArr[fl].includes("LAND")) {
+    findLAND.push(counArr[fl]);
+  }
+}
+console.log(findLAND);
+
+// In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+const find_ia = [];
+for (let fia = 0; fia < counArr.length; fia++) {
+  if (counArr[fia].endsWith("IA")) {
+    find_ia.push(counArr[fia]);
+  }
+}
+console.log(find_ia);
+
+// Using the above countries array, find the country containing the biggest number of characters.
+
+let lastCountry = "";
+for (let lc = 0; lc < counArr.length; lc++) {
+  if (counArr[lc].length > lastCountry.length) {
+    lastCountry = counArr[lc];
+  }
+}
+console.log(lastCountry);
+
+// Using the above countries array, find the country containing only 5 characters.
+const len5 = [];
+for (let lf = 0; lf < counArr.length; lf++) {
+  if (counArr[lf].length === 5) {
+    len5.push(counArr[lf]);
+  }
+}
+console.log(len5);
+
+// Find the longest word in the webTechs array
+let longIt = "";
+for (let li = 0; li < webTech.length; li++) {
+  if (webTech[li].length > longIt.length) {
+    longIt = webTech[li];
+  }
+}
+console.log(longIt);
+
+// Use the webTechs array to create the following array of arrays:
+// [["HTML", 4], ["CSS", 3],["JavaScript", 10]]
+
+const result1 = webTech.map(web => [web, web.length]);
+console.log(result1);
+
+// An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+const mernStac = ["MongoDB", "Express", "React", "Node"];
+const mern = mernStac.map(stack => stack.charAt(0)).join("");
+console.log(mern);
+
+// Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+
+for (const newWeb of webTech) {
+  console.log(newWeb);
+}
+//This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+const fruiTS = ["banana", "orange", "mango", "lemon"];
+const reverseFruits = [];
+for (let f = fruiTS.length - 1; f >= 0; f--) {
+  reverseFruits.push(fruiTS[f]);
+}
+console.log(reverseFruits);
+
+const fullStack1 = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"]
+];
+
+for (let fs1 = 0; fs1 < fullStack1.length; fs1++) {
+  for (let fs2 = 0; fs2 < fullStack1[fs1].length; fs2++) {
+    console.log(fullStack1[fs1][fs2].toUpperCase());
+  }
+}
+
+// ** Exercises: Level 3 **
+// Copy countries array(Avoid mutation)
+const rashtra = ["India", "China", "Brazil", "Canada", "Australia"];
+// Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+const copiesRashtra = ["India", "Brazil", "China", "Canada", "Australia"];
+console.log(copiesRashtra);
+const copyRashSort = copiesRashtra.sort();
+
+console.log(copyRashSort);
+
+// Sort the webTechs array and mernStack array
+const sortWebTech = webTech.sort();
+console.log(sortWebTech);
+const sortMERN = mernStac.sort();
+console.log(sortMERN);
+
+// Extract all the countries contain the word 'land' from the countries array and print it as array
+const findLand = [];
+for (let fl1 = 0; fl1 < counArr.length; fl1++) {
+  if (counArr[fl1].includes("LAND")) {
+    findLand.push(counArr[fl1]);
+  }
+}
+console.log(findLand);
+
+// Find the country containing the hightest number of characters in the countries array
+let finalLast = "";
+for (let lf = 0; lf < counArr.length; lf++) {
+  if (counArr[lf].length > finalLast.length) {
+    finalLast = counArr[lf];
+  }
+}
+console.log(finalLast);
+
+//Reverse the countries array and capitalize each country and stored it as an array
+
+const revCou = [];
+for (rc = rashtra.length - 1; rc >= 0; rc--) {
+  revCou.push(rashtra[rc]);
+}
+console.log(revCou);
