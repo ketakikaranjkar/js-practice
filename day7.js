@@ -85,3 +85,12 @@ const changeToUpperCase = arr => {
 
 const countries = ["Finland", "Sweden", "Norway", "Denmark", "Iceland"];
 console.log(changeToUpperCase(countries));
+
+const sumAllNUMs = args => {
+  let sum = 0;
+  for (const element of args) {
+    sum += element;
+  }
+  return sum;
+};
+comsole.log(sumAllNUMs(1, 2, 3, 4));
