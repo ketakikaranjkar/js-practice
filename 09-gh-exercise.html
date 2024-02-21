@@ -22,6 +22,17 @@
 
     <p class="js-total-cost"></p>
 
+    <input
+      placeholder="type..."
+      class="js-text"
+      onkeyup="
+      const inputElement = document.querySelector('.js-text');
+      document.querySelector('.js-down-text')
+       .innerHTML = inputElement.value;
+    "
+    />
+    <p class="js-down-text"></p>
+
     <script>
       function handleCostTotal(event) {
         if (event.key === "Enter") {
@@ -34,7 +45,7 @@
         let cost = Number(inputElement.value);
 
         if (cost < 40) {
-          cost = cost + 10;
+          cost = (cost + 10).toFixed(2);
         }
         document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
       }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09 Exercise(2)</title>
+  </head>
+  <body>
+    <input placeholder="Name" class="js-name" onkeydown="enterName()" />
+    <button onclick="submitName();">Submit</button>
+    <p class="js-display-name"></p>
+
+    <script>
+      function enterName() {
+        if (event.key === "Enter") {
+          const inputElement = document.querySelector(".js-name");
+          document.querySelector(
+            ".js-display-name"
+          ).innerHTML = `Your name is: ${inputElement.value}`;
+        }
+      }
+
+      function submitName() {
+        const inputElement = document.querySelector(".js-name");
+        document.querySelector(
+          ".js-display-name"
+        ).innerHTML = `Your name is: ${inputElement.value}`;
+      }
+    </script>
+  </body>
+</html>
