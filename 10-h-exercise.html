@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM my project</title>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .follow-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 30px;
+      }
+      .is-following {
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+      .is-unfollow {
+        background-color: red;
+        color: black;
+      }
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+      .calculate-button {
+        background-color: green;
+        color: white;
+        padding: 10px;
+        border: none;
+        font-size: 17px;
+        cursor: pointer;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>@ Ketaki_Karanjkar</p>
+    <button onclick="follow ();" class="js-follow-button follow-button">
+      Follow
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input
+      type="text"
+      placeholder="Cost of order"
+      class="js-cost-input cost-input"
+      onkeydown="handleCostTotal(event)"
+    />
+
+    <button onclick="calculateTotal();" class="calculate-button">
+      Calculate
+    </button>
+
+    <p class="js-total-cost error"></p>
+
+    <script>
+      function handleCostTotal(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value);
+        document.querySelector(".js-total-cost").innerHTML = "";
+        document.querySelector(".error").innerHTML = "";
+
+        if (cost < 0) {
+          document.querySelector(
+            ".error"
+          ).innerHTML = `Error: cost canoot be less than $0`;
+          return;
+        }
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
+
+      function follow() {
+        const buttonElement = document.querySelector(".js-follow-button");
+        if (buttonElement.innerHTML === "Follow") {
+          buttonElement.innerHTML = "Following";
+          buttonElement.classList.add("is-following");
+        } else if (buttonElement.innerHTML === "Following") {
+          buttonElement.innerHTML = "Unfollow";
+          buttonElement.classList.add("is-unfollow");
+        } else {
+          buttonElement.innerHTML = "Follow";
+          buttonElement.classList.remove("is-unfollow");
+          buttonElement.classList.remove("is-following");
+        }
+      }
+    </script>
+  </body>
+</html>

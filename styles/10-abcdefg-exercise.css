@@ -1,0 +1,47 @@
+.add-cart-button {
+  background-color: rgb(255, 216, 20);
+  border: none;
+  color: black;
+  border-radius: 30px;
+  padding: 5px 40px;
+}
+.request-button {
+  background-color: black;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: small;
+}
+.schedule-button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: small;
+}
+.js-gb {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.js-mb {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.js-tb {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.is-toggle {
+  background-color: black;
+  color: white;
+}
